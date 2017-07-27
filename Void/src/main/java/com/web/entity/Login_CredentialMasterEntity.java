@@ -20,11 +20,14 @@ public class Login_CredentialMasterEntity {
 	@Column(name="credentialmaster_pk")
 	private Integer credentialmasterPk;
 
-	@Column(name="username")
-	private String username;
+	/*@Column(name="username")
+	private String username;*/
 	
 	@Column(name="passwd")
 	private String passwd;
+	
+	@Column(name="conf_passwd")
+	private String confPasswd;
 
 	@Column(name="primary_email")
 	private String primaryEmail;
@@ -77,13 +80,21 @@ public class Login_CredentialMasterEntity {
 		this.uniquekey = uniquekey;
 	}
 
-	public String getUsername() {
+	public String getConfPasswd() {
+		return confPasswd;
+	}
+
+	public void setConfPasswd(String confPasswd) {
+		this.confPasswd = confPasswd;
+	}
+
+	/*public String getUsername() {
 		return this.username;
 	}
 
 	public void setUsername(String username) {
 		this.username = username;
-	}
+	}*/
 
 
 
